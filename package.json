@@ -2,13 +2,24 @@
   "name": "sandbox_githubpage-nuxt",
   "version": "1.0.0",
   "description": "",
+  "homepage": "http://iceyisaak.github.io/sandbox_githubpage-nuxt>",
   "scripts": {
-    "dev": "nuxt"
+    "start": "nuxt start",
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "build:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt build",
+    "generate": "nuxt generate",
+    "generate:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt generate",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "gh-pages": "^2.2.0",
     "nuxt": "^2.12.2"
+  },
+  "devDependencies": {
+    "push-dir": "^0.4.1"
   }
 }
